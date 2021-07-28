@@ -1,15 +1,15 @@
 <p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+  <a href="http://vnlab.filmschool.lodz.pl/">
+    <img alt="Gatsby" src="src/images/vnLab-icon.png" />
   </a>
 </p>
 <h1 align="center">
-  Gatsby's default starter
+  Publication-as-a-Website Basic Starter
 </h1>
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+Create your next online publication with this PaaW boilerplate. It ships with a Gatsby configuration that supports single language publications.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
+_If you're looking for a more complex publication take a look at the [collection of vnLab starters](https://github.com/vnLab-Lodz/vnLab-templates)._
 
 ## 🚀 Quick start
 
