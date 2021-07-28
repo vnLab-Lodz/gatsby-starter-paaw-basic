@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Basic vnLab PaaW Starter`,
+    title: `Basic Publication-as-a-Website Starter`,
     description: `Kick off your next PaaW project with this basic starter.`,
     author: `@vnLab1`,
     siteUrl: `http://vnlab.filmschool.lodz.pl/`,
@@ -17,5 +17,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sass`,
   ],
 }
