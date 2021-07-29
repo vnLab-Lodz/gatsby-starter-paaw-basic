@@ -9,6 +9,9 @@ export default {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-sass`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-mdx`,
@@ -38,8 +41,22 @@ export default {
         path: `${__dirname}/../publication`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Default vnLab Publication-as-a-Website starter`,
+        short_name: `vnLab starter`,
+        description: `A simple starter for PaaW projects.`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#000000`,
+        display: `standalone`,
+        orientation: `portrait`,
+        icon: `${__dirname}/../src/images/vnLab-maskable.png`,
+        icon_options: {
+          purpose: "any maskable",
+        },
+      },
+    },
   ],
 } as GatsbyConfig
