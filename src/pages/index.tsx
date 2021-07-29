@@ -1,10 +1,24 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { graphql, Link, PageProps } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/PageLayout"
 import Seo from "../components/Seo"
 
-const IndexPage = () => (
+interface Node {
+  id: string
+  slug: string
+  frontmatter: {
+    title: string
+  }
+}
+
+interface Data {
+  allMdx: {
+    nodes: Node[]
+  }
+}
+
+const IndexPage: React.FC<PageProps<Data>> = ({ data: { allMdx } }) => (
   <Layout>
     <Seo title="Home" />
     <h1>Congratulations!</h1>
@@ -23,7 +37,31 @@ const IndexPage = () => (
         Go to page 2
       </Link>
     </p>
+    <h2>Chapters</h2>
+    <ul>
+      {allMdx.nodes.map(node => (
+        <li key={node.id}>
+          <Link to={"/" + node.slug} style={{ color: "#00b140" }}>
+            {node.frontmatter.title}
+          </Link>
+        </li>
+      ))}
+    </ul>
   </Layout>
 )
+
+export const query = graphql`
+  query {
+    allMdx {
+      nodes {
+        id
+        slug
+        frontmatter {
+          title
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage
