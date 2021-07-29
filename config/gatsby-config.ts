@@ -35,7 +35,7 @@ export default {
       },
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog`,
         path: `${__dirname}/../publication`,
@@ -54,7 +54,17 @@ export default {
         orientation: `portrait`,
         icon: `${__dirname}/../src/images/vnLab-maskable.png`,
         icon_options: {
-          purpose: "any maskable",
+          purpose: `any maskable`,
+        },
+        cache_busting_mode: `none`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/*`],
+        workboxConfig: {
+          globPatterns: [`**/icons/*`],
         },
       },
     },
