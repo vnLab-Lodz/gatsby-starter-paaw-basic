@@ -9,6 +9,8 @@
 
 Create your next online publication with this PaaW boilerplate. It ships with a Gatsby configuration that supports single language publications.
 
+👀 [See it in action!](https://vnlab-lodz.github.io/gatsby-starter-paaw-basic/)
+
 _If you're looking for a more complex publication take a look at the [collection of vnLab starters](https://github.com/vnLab-Lodz/vnLab-templates)._
 
 ## 🚀 Quick start
