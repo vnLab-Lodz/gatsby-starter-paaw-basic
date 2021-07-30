@@ -18,8 +18,8 @@ _If you're looking for a more complex publication take a look at the [collection
     Use the Gatsby CLI ([install instructions](https://www.gatsbyjs.com/docs/tutorial/part-0/#gatsby-cli)) to create a new site, specifying the default starter.
 
     ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
+    # create a new PaaW project using the basic starter
+    gatsby new my-publication https://github.com/vnLab-Lodz/gatsby-starter-paaw-basic
     ```
 
 1.  **Start developing.**
@@ -27,7 +27,7 @@ _If you're looking for a more complex publication take a look at the [collection
     Navigate into your new site’s directory and start it up.
 
     ```shell
-    cd my-default-starter/
+    cd my-publication/
     gatsby develop
     ```
 
