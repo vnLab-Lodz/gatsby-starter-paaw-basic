@@ -21,7 +21,9 @@ const query = graphql`
   }
 `
 
-const PageLayout: React.FC = ({ children }) => {
+const PageLayout: React.FC<React.PropsWithChildren<unknown>> = ({
+  children,
+}) => {
   const { site } = useStaticQuery<Query>(query)
   const title = site.siteMetadata.title || "Title"
   const date = new Date().getFullYear()
@@ -35,6 +37,7 @@ const PageLayout: React.FC = ({ children }) => {
           © {date}, Built with
           {` `}
           <a
+            rel="noopener"
             href="https://www.gatsbyjs.com"
             target="_blank"
             style={{ color: "#00b140" }}
