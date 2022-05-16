@@ -1,9 +1,9 @@
 import * as React from "react"
-import Header from "../Header"
+import Header from "../header"
 import { graphql, useStaticQuery } from "gatsby"
 import { SiteMetadata } from "../../types/config"
 import "./globals.css"
-import "./PageLayout.scss"
+import "./styles.scss"
 
 interface Query {
   site: {

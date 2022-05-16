@@ -1,7 +1,7 @@
-import * as React from "react"
+import React from "react"
 import { Link } from "gatsby"
-import "./Header.scss"
 import { StaticImage } from "gatsby-plugin-image"
+import "./styles.scss"
 
 interface Props {
   siteTitle: string

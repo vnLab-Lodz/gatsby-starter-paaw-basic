@@ -1,8 +1,8 @@
 import * as React from "react"
 import { graphql, Link, PageProps } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import Layout from "../components/PageLayout"
-import Seo from "../components/Seo"
+import Layout from "../components/page-layout"
+import Seo from "../components/seo"
 
 interface Node {
   id: string

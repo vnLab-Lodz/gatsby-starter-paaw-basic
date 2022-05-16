@@ -1,7 +1,8 @@
 import React from "react"
 import { graphql, PageProps } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import Layout from "../components/PageLayout"
+import Layout from "../components/page-layout"
+import Seo from "../components/seo"
 
 interface Data {
   mdx: {
@@ -13,9 +14,10 @@ interface Data {
   }
 }
 
-const Section: React.FC<PageProps<Data>> = ({ data: { mdx } }) => {
+const Chapter: React.FC<PageProps<Data>> = ({ data: { mdx } }) => {
   return (
     <Layout>
+      <Seo title={mdx.frontmatter.title} />
       <MDXRenderer frontmatter={mdx.frontmatter}>{mdx.body}</MDXRenderer>
     </Layout>
   )
@@ -33,4 +35,4 @@ export const query = graphql`
   }
 `
 
-export default Section
+export default Chapter

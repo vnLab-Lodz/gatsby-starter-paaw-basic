@@ -40,10 +40,8 @@ export const createPages = async ({ graphql, actions }: CreatePagesArgs) => {
   data?.allMdx.edges.forEach(({ node }) => {
     createPage({
       path: node.slug,
-      component: path.resolve("./src/templates/Section.tsx"),
-      context: {
-        id: node.id,
-      },
+      component: path.resolve("./src/templates/chapter.tsx"),
+      context: { id: node.id },
     })
   })
 }
